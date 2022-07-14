@@ -70,10 +70,12 @@
 }
 .container-trash {
   position: relative;
+  border: none;
   left: 180px;
   top: -22px;
   font-size: 1.2rem;
   color: var(--secondary-color);
+  cursor: pointer;
 }
 @media screen and (min-width: 375px){
   .cart__quantity {

@@ -1,6 +1,27 @@
 import React from 'react'
+import axios from "axios"
+import getConfig from '../../utils/getConfig'
+import { getAllProductsCart } from '../../store/slices/cart.slice'
+import {useDispatch} from "react-redux"
 
 const CartInfo = ({productcart}) => {
+
+const dispatch = useDispatch()
+
+  const deleteProductFromCart = (e) => {
+    e.stopPropagation()
+
+    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${productcart.id}`
+
+
+
+    axios.delete(URL, getConfig())
+      .then(res => {
+        console.log(res.data)
+        dispatch(getAllProductsCart())
+      })
+      .catch(err => console.log(err.data))
+  }
 
   return (
     <article>
@@ -12,9 +33,9 @@ const CartInfo = ({productcart}) => {
         </h4>
       </div>
       <h4 className="cart__price"> $ {productcart.price}</h4>
-      <div className="container-trash">
+      <button className="container-trash" onClick={deleteProductFromCart}>
         <i className="fa-solid fa-trash-can"></i>
-      </div>
+      </button>
     </article>
   );
 }
