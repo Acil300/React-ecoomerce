@@ -221,7 +221,7 @@ p {
   .navbar__list {
     padding: 20px;
     position: relative;
-    left: -65px;
+    left: -10px;
   }
   .purchase-card__date {
     font-size: 2.2rem;
