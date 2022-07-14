@@ -134,6 +134,7 @@ p {
   .header {
     padding: var(--padding-tablet);
     margin-bottom: 50px;
+    overflow: hidden;
 
   }
 
@@ -202,8 +203,10 @@ p {
     -moz-transform: initial;
     -ms-transform: initial;
     -o-transform: initial;
+     padding: 20px;
+     position: relative;
+     left: -30px;
   }
-
   .navbar__links i {
     margin-bottom: 5px;
     color: black;
@@ -211,6 +214,23 @@ p {
 
   p {
     color: black;
+  }
+
+}
+@media screen and (min-width: 1024px){
+  .navbar__list {
+    padding: 20px;
+    position: relative;
+    left: -65px;
+  }
+  .purchase-card__date {
+    font-size: 2.2rem;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .product-purchases__container-general {
+    border: 1px solid var(--border-color);
+    width: 70%;
   }
 
 }
