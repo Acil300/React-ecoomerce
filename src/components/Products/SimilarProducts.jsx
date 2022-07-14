@@ -20,16 +20,12 @@ const SimilarProducts = ({product}) => {
     <div>
       <article className="similar-products">
         <h2 className="similar-products__title">Discover Similar Items</h2>
-        <div className="products-container">
-          {
-            filterProducts?.map((e) =>{
-              if (e.title !== product.title) {
-                return (
-                  <ProductCard key={e.id} product={e} />
-                )
-              }
-            })
-          }
+        <div className="products-container2">
+          {filterProducts?.map((e) => {
+            if (e.title !== product.title) {
+              return <ProductCard key={e.id} product={e} />;
+            }
+          })}
         </div>
       </article>
     </div>

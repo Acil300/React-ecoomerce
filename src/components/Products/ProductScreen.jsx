@@ -140,6 +140,7 @@ const ProductScreen = () => {
           &#62;
         </div>
       </div>
+      <div ></div>
       <SimilarProducts product={productScreen} />
     </div>
   );

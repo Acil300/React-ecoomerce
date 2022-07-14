@@ -121,3 +121,27 @@ input{
   text-transform:capitalize;
   font-weight:400;
 }
+@media screen and (min-width: 768px){
+  .logged__container-general {
+    width: 50%;
+    top: 200px;
+    height: 200px;
+  }
+  .logged__title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    top: -165px;
+  }
+  .logged__subtitle {
+    top: -105px;
+    font-size: 2.8rem;
+    width: 100%;
+  }
+  .logged__container-icon {
+    top: 75px;
+  }
+  .logged__check-user {
+    font-size: 3.2rem;
+  }
+
+}

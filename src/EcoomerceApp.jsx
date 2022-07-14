@@ -43,8 +43,6 @@ const dispatch =useDispatch()
   }, []);
 
 
-
-
   return (
     <div>
       <HeaderScreen />
